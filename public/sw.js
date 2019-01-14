@@ -187,7 +187,7 @@ self.addEventListener('notificationclick', e => {
     const respuesta = clients.matchAll()
     .then(clientes => {
         let cliente = clientes.find(c => {
-            return visibilityState === 'visible';
+            return c.visibilityState === 'visible';
         });
 
         if(cliente !== undefined){
